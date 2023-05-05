@@ -1,20 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package coco_chat_cliente;
 
-/**
- *
- * @author gnuno
- */
+import java.io.IOException;
+import java.net.Socket;
+
+
 public class Coco_Chat_Cliente {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
+        Socket s = new Socket("192.168.84.44", 1234);
+        s.getOutputStream().write("Hola UwU".getBytes());
+        //System.out.println(s.getInputStream().read());
+        System.out.println(s.getInputStream().read());
     }
+
     
 }
